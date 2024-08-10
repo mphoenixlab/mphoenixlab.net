@@ -55,12 +55,16 @@
             max-width: 100%;
             height: auto;
         }
+        .spacer {
+            height: 80px; /* Adjust this height to match the height of your logo section */
+        }
     </style>
 </head>
 <body>
     <div class="logo">
-        <img src="./Images/Mphoenixlab.png" alt="Logo">
+        <img src="Images/Mphoenixlab.png" alt="Logo">
     </div>
+    <div class="spacer"></div> <!-- Spacer to prevent headings from hiding behind the logo -->
     <div class="container">
         <div class="sidebar">
             <a href="#home">Home</a>
@@ -73,39 +77,54 @@
             <a href="#contact-us">Contact Us</a>
         </div>
         <div class="content">
-            <div id="home" class="section" style="background-image: url('../Images/home-bg.jpg');">
+            <div id="home" class="section" style="background-image: url('images/home-bg.jpg');">
                 <h2>Home</h2>
                 <p>Welcome to our homepage...</p>
             </div>
-            <div id="it-services" class="section" style="background-image: url('../Images/it-services-bg.jpg');">
+            <div id="it-services" class="section" style="background-image: url('images/it-services-bg.jpg');">
                 <h2>IT Services</h2>
                 <p>Details about our IT services...</p>
             </div>
-            <div id="it-consulting" class="section" style="background-image: url('../Images/it-consulting-bg.jpg');">
+            <div id="it-consulting" class="section" style="background-image: url('images/it-consulting-bg.jpg');">
                 <h2>IT Consulting</h2>
                 <p>Information about our IT consulting...</p>
             </div>
-            <div id="solutions" class="section" style="background-image: url('../Images/solutions-bg.jpg');">
+            <div id="solutions" class="section" style="background-image: url('images/solutions-bg.jpg');">
                 <h2>Solutions</h2>
                 <p>Our solutions for various needs...</p>
             </div>
-            <div id="poc-case-studies" class="section" style="background-image: url('../Images/poc-case-studies-bg.jpg');">
+            <div id="poc-case-studies" class="section" style="background-image: url('images/poc-case-studies-bg.jpg');">
                 <h2>POC & Case Studies</h2>
                 <p>Examples of our POC and case studies...</p>
             </div>
-            <div id="about-us" class="section" style="background-image: url('../Images/about-us-bg.jpg');">
+            <div id="about-us" class="section" style="background-image: url('images/about-us-bg.jpg');">
                 <h2>About Us</h2>
                 <p>Learn more about us...</p>
             </div>
-            <div id="careers" class="section" style="background-image: url('../Images/careers-bg.jpg');">
+            <div id="careers" class="section" style="background-image: url('images/careers-bg.jpg');">
                 <h2>Careers</h2>
                 <p>Join our team...</p>
             </div>
-            <div id="contact-us" class="section" style="background-image: url('../Images/contact-us-bg.jpg');">
+            <div id="contact-us" class="section" style="background-image: url('images/contact-us-bg.jpg');">
                 <h2>Contact Us</h2>
                 <p>Get in touch with us...</p>
             </div>
         </div>
     </div>
+    <script>
+        // JavaScript to add offset for smooth scrolling
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const offset = document.querySelector('.logo').offsetHeight;
+                window.scrollTo({
+                    top: targetElement.offsetTop - offset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
