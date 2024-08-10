@@ -24,14 +24,16 @@
         }
         .content {
             margin-left: 220px; /* Adjust this value to match the width of the sidebar */
-            padding: 20px;
+            padding: 0;
+            width: calc(100% - 220px); /* Ensure content takes full width */
         }
         .section {
-            height: 100vh;
+            min-height: 100vh;
             padding: 20px;
             border-bottom: 1px solid #ccc;
             background-size: cover;
             background-position: center;
+            width: 100%; /* Ensure section takes full width */
         }
         .sidebar a {
             display: block;
@@ -117,15 +119,14 @@
         </div>
     </div>
     <script>
-        // JavaScript to add offset for smooth scrolling and update URL
+        // JavaScript to scroll to top and update URL
         document.querySelectorAll('.sidebar a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-                const offset = document.querySelector('.logo-container').offsetHeight;
                 window.scrollTo({
-                    top: targetElement.offsetTop - offset,
+                    top: targetElement.offsetTop,
                     behavior: 'smooth'
                 });
                 history.pushState(null, null, `#${targetId}`);
