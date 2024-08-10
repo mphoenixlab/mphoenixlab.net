@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mphoenix Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .section {
+            height: 100vh;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#home">Home</a>
+            <a href="#it-services">IT Services</a>
+            <a href="#it-consulting">IT Consulting</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#poc-case-studies">POC & Case Studies</a>
+            <a href="#login">Login</a>
+            <a href="#about-us">About Us</a>
+            <a href="#careers">Careers</a>
+        </div>
+        <div class="content">
+            <div id="home" class="section">
+                <h2>Home</h2>
+                <p>Welcome to our homepage...</p>
+            </div>
+            <div id="it-services" class="section">
+                <h2>IT Services</h2>
+                <p>Details about our IT services...</p>
+            </div>
+            <div id="it-consulting" class="section">
+                <h2>IT Consulting</h2>
+                <p>Information about our IT consulting...</p>
+            </div>
+            <div id="solutions" class="section">
+                <h2>Solutions</h2>
+                <p>Our solutions for various needs...</p>
+            </div>
+            <div id="poc-case-studies" class="section">
+                <h2>POC & Case Studies</h2>
+                <p>Examples of our POC and case studies...</p>
+            </div>
+            <div id="login" class="section">
+                <h2>Login</h2>
+                <p>Login to your account...</p>
+            </div>
+            <div id="about-us" class="section">
+                <h2>About Us</h2>
+                <p>Learn more about us...</p>
+            </div>
+            <div id="careers" class="section">
+                <h2>Careers</h2>
+                <p>Join our team...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
